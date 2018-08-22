@@ -20,5 +20,5 @@ install:
   - yarn install
 
 script:
-  - xvfb-run -a yarn test --watch=false --progress=false --browser=ChromeHeadlessCI
+  - xvfb-run -a yarn test --watch=false --progress=false --browsers=ChromeHeadlessCI
   - xvfb-run -a yarn e2e

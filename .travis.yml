@@ -22,6 +22,3 @@ install:
 script:
   - xvfb-run -a yarn test --watch=false --progress=false --browsers=ChromeHeadlessCI --code-coverage
   - xvfb-run -a yarn e2e
-
-after_script:
-  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js

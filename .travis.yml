@@ -18,4 +18,6 @@ script:
   - yarn lint
   - env
 
+after_success:
+  - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then curl ${JENKINS_DEPLOY_URL}; fi'
 
